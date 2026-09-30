@@ -5,40 +5,39 @@
 <style>
 /* Layout: one narrow column, read top to bottom on a phone. Who, the hire line (the single filled block), four proof rows, one case with a to-scale margin bar, target roles, contact. */
 :root {
-  --bg: #EDF0EE;
+  --primary: #81D8D0;
+  --on-primary: #0E2A28;
+  --bg: #F3F8F7;
   --surface: #FFFFFF;
-  --ink: #12241F;
-  --muted: #54655F;
-  --line: #CBD4D0;
-  --accent: #0A6B55;
-  --accent-ink: #FFFFFF;
-  --bar-base: #9AA9A3;
+  --ink: #0E2A28;
+  --muted: #4F6A67;
+  --line: #CFE0DD;
+  --accent: #0B6B66;
+  --bar-base: #A8BDBA;
   --font-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
   --font-body: 'Source Sans 3', 'Segoe UI', Roboto, Arial, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0D1815;
-    --surface: #14231F;
-    --ink: #E7F0EC;
-    --muted: #9DB0A9;
-    --line: #2A3B36;
-    --accent: #4CCBA0;
-    --accent-ink: #06231A;
-    --bar-base: #5E736C;
+    --bg: #0B1A19;
+    --surface: #122624;
+    --ink: #E6F3F1;
+    --muted: #9DBAB6;
+    --line: #25403D;
+    --accent: #81D8D0;
+    --bar-base: #4D6764;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0D1815;
-  --surface: #14231F;
-  --ink: #E7F0EC;
-  --muted: #9DB0A9;
-  --line: #2A3B36;
-  --accent: #4CCBA0;
-  --accent-ink: #06231A;
-  --bar-base: #5E736C;
+  --bg: #0B1A19;
+  --surface: #122624;
+  --ink: #E6F3F1;
+  --muted: #9DBAB6;
+  --line: #25403D;
+  --accent: #81D8D0;
+  --bar-base: #4D6764;
   color-scheme: dark;
 }
 
@@ -77,8 +76,8 @@ h1 { font-size: clamp(38px, 11vw, 56px); font-weight: 800; line-height: 1; lette
 
 /* Hire line */
 .hire {
-  background: var(--accent);
-  color: var(--accent-ink);
+  background: var(--primary);
+  color: var(--on-primary);
   padding: 24px 22px 26px;
   display: flex;
   flex-direction: column;
@@ -133,8 +132,8 @@ h2 { font-size: 24px; font-weight: 700; line-height: 1.15; }
 .bar-row .label { font-size: 11px; }
 .track { position: relative; height: 30px; background: repeating-linear-gradient(to right, transparent 0, transparent calc(25% - 1px), var(--line) calc(25% - 1px), var(--line) 25%); border-bottom: 1px solid var(--line); }
 .fill { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; font-family: var(--font-mono); font-weight: 500; font-size: 14px; font-variant-numeric: tabular-nums; }
-.fill.before { width: 39%; background: var(--bar-base); color: var(--bg); }
-.fill.after { width: 52%; background: var(--accent); color: var(--accent-ink); }
+.fill.before { width: 39%; background: var(--bar-base); color: var(--ink); }
+.fill.after { width: 52%; background: var(--primary); color: var(--on-primary); }
 .axis { display: grid; grid-template-columns: 3.6rem minmax(0, 1fr); gap: 12px; }
 .ticks { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
 .caption { margin: 0; font-size: 15px; color: var(--muted); }
@@ -246,7 +245,7 @@ button.copy:focus-visible, a:focus-visible { outline: 3px solid var(--accent); o
       <li>Business Manager</li>
       <li>Services and Operations Business Management</li>
     </ul>
-    <p class="where">Slovakia, Czechia, Austria and remote EMEA.</p>
+    <p class="where">Slovakia, and remote Czechia, Austria, EMEA.</p>
   </section>
 
   <section aria-labelledby="contact-h">
@@ -254,7 +253,7 @@ button.copy:focus-visible, a:focus-visible { outline: 3px solid var(--accent); o
     <dl class="contact">
       <div>
         <dt>Email</dt>
-        <dd id="c-email">patrikhorsky@me.com</dd>
+        <dd id="c-email"><a href="mailto:patrikhorsky@me.com">patrikhorsky@me.com</a></dd>
         <button class="copy" type="button" data-target="c-email">Copy</button>
       </div>
       <div>
